@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Skoglu Sightings Log — Veldtloor Forest | skoglu</title>
+  <meta name="description" content="Skoglu Sightings: a log to record sightings of Skoglus in Veldtloor Forest. Explore sightings around the skoglu universe.">
+  <meta name="keywords" content="skoglu, skoglu sightings, Veldtloor Forest, skoglus">
+  <meta name="author" content="skoglu">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL (update if you use a custom domain) -->
+  <link rel="canonical" href="https://skoglu-basecamp.github.io/skoglu/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Skoglu Sightings Log — Veldtloor Forest | skoglu">
+  <meta property="og:description" content="Skoglu Sightings: a log to record sightings of Skoglus in Veldtloor Forest.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skoglu-basecamp.github.io/skoglu/">
+  <meta property="og:site_name" content="Skoglu Sightings Log">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card (optional but useful) -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Skoglu Sightings Log — Veldtloor Forest | skoglu">
+  <meta name="twitter:description" content="Skoglu Sightings: a log to record sightings of Skoglus in Veldtloor Forest. Explore sightings around the skoglu universe.">
+
+  <!-- Favicon (optional but recommended) -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+
+<style>
+
+/* =========================================================
+   BASE
+========================================================= */
+
+:root {
+    --forest-black: #0b0e0b;
+    --forest-deep: #111610;
+    --forest-panel: #151a13;
+    --forest-panel-light: #1b2118;
+
+    --moss: #879b4d;
+    --moss-bright: #a5b968;
+
+    --cream: #ded9c9;
+    --cream-soft: #bdb9ac;
+    --muted: #85877d;
+
+    --line: rgba(174, 183, 139, 0.17);
+
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080a08;
+    color: var(--cream);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+    width: min(100% - 28px, 1280px);
+    margin: 14px auto;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(79, 96, 51, 0.08),
+            transparent 35%
+        ),
+        var(--forest-black);
+
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   SIMPLE HEADER
+========================================================= */
+
+.header {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+
+    border-bottom: 1px solid var(--line);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 39, 25, 0.35),
+            transparent 55%
+        );
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-mark {
+    width: 28px;
+    height: 38px;
+    position: relative;
+}
+
+/* simple botanical mark */
+.brand-mark::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 2px;
+    width: 2px;
+    height: 34px;
+    background: var(--moss);
+    transform: rotate(3deg);
+}
+
+.brand-mark::after {
+    content: "✦";
+    position: absolute;
+    left: 1px;
+    top: 4px;
+    color: var(--moss);
+    font-size: 25px;
+    transform: rotate(45deg);
+}
+
+.brand-name {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    color: var(--cream);
+}
+
+.brand-subtitle {
+    margin-top: 7px;
+
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 405px;
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5,8,5,0.10) 0%,
+            rgba(5,8,5,0.18) 35%,
+            rgba(5,8,5,0.94) 100%
+        ),
+        url("https://skoglu-basecamp.github.io/skoglu/github-skog.jpg")
+        center 52% / cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6,9,6,0.72),
+            rgba(6,9,6,0.16) 65%,
+            rgba(6,9,6,0.45)
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 58px 62px 52px;
+
+    max-width: 760px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 17px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+
+    color: var(--moss-bright);
+}
+
+.hero-heading {
+    margin: 0;
+    font-family: "Changa One", sans-serif;
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 0.94;
+    color: #eeeade;
+	letter-spacing: 1;
+    text-shadow: 0 4px 22px rgba(0,0,0,0.55);
+}
+
+.hero-rule {
+    width: 54px;
+    height: 2px;
+
+    margin: 25px 0 19px;
+
+    background: var(--moss);
+}
+
+.hero-description {
+    max-width: 590px;
+
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #d1cec1;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 18px;
+
+    padding: 24px 28px 30px;
+}
+
+
+/* =========================================================
+   SIGHTINGS PANEL
+========================================================= */
+
+.panel {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,36,26,0.70),
+            rgba(15,19,14,0.80)
+        );
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.panel-heading {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 27px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.panel-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--cream);
+}
+
+.panel-title-icon {
+    color: var(--moss-bright);
+    font-size: 21px;
+}
+
+.panel-note {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   SIGHTING ROWS
+========================================================= */
+
+.sightings {
+    padding: 0 27px;
+}
+
+.sighting {
+    min-height: 70px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.75fr 1fr;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(174,183,139,0.12);
+
+    transition:
+        background 180ms ease,
+        padding 180ms ease;
+}
+
+.sighting:last-child {
+    border-bottom: none;
+}
+
+.sighting:hover {
+    background: rgba(126,148,71,0.045);
+}
+
+.date {
+    font-size: 14px;
+    color: #c9c6b9;
+}
+
+.time {
+    font-size: 14px;
+    color: #aaa99f;
+}
+
+.location {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 14px;
+    color: var(--moss-bright);
+
+    letter-spacing: 0.025em;
+}
+
+.location-marker {
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid var(--moss-bright);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 3px rgba(135,155,77,0.08);
+}
+
+
+/* =========================================================
+   SIDE PANELS
+========================================================= */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.side-panel {
+    padding: 27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27,33,24,0.76),
+            rgba(15,18,14,0.88)
+        );
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.side-panel h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    color: var(--cream);
+}
+
+.side-rule {
+    width: 35px;
+    height: 2px;
+
+    margin: 17px 0 18px;
+
+    background: var(--moss);
+}
+
+.side-panel p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.75;
+
+    color: var(--cream-soft);
+}
+
+.side-panel p + p {
+    margin-top: 16px;
+}
+
+
+/* =========================================================
+   OBSERVATORY LINK PANEL
+========================================================= */
+
+.observatory-panel {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(52,61,38,0.23),
+            rgba(15,18,13,0.90)
+        );
+}
+
+.observatory-label {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--moss-bright);
+}
+
+.observatory-panel h2 {
+    font-size: 22px;
+}
+
+.observatory-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 46px;
+
+    margin-top: 23px;
+
+    border: 1px solid rgba(145,165,86,0.7);
+    border-radius: 5px;
+
+    color: var(--moss-bright);
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+.observatory-button:hover {
+    background: rgba(135,155,77,0.10);
+    border-color: var(--moss-bright);
+    color: #d4dda9;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    padding: 22px 28px 25px;
+
+    border-top: 1px solid rgba(174,183,139,0.10);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #686b63;
+}
+
+.footer-accent {
+    color: #858b71;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 820px) {
+
+    .page {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+
+        border-radius: 11px;
+    }
+
+    .header {
+        height: 70px;
+        padding: 0 22px;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-subtitle {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 455px;
+
+        background-position:
+            60% center;
+    }
+
+    .hero::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,8,5,0.05),
+                rgba(5,8,5,0.22) 35%,
+                rgba(5,8,5,0.96) 100%
+            );
+    }
+
+    .hero-content {
+        padding: 45px 25px 38px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 13vw, 62px);
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .content {
+        display: block;
+        padding: 14px 12px 20px;
+    }
+
+    .sidebar {
+        margin-top: 14px;
+    }
+
+    .panel-heading {
+        min-height: 70px;
+        padding: 0 18px;
+    }
+
+    .panel-title {
+        font-size: 12px;
+    }
+
+    .panel-note {
+        display: none;
+    }
+
+    .sightings {
+        padding: 0 18px;
+    }
+
+    .sighting {
+        min-height: 67px;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+        grid-template-areas:
+            "date location"
+            "time location";
+
+        padding: 10px 0;
+    }
+
+    .date {
+        grid-area: date;
+        font-size: 13px;
+    }
+
+    .time {
+        grid-area: time;
+        margin-top: 4px;
+        font-size: 12px;
+        color: #85867e;
+    }
+
+    .location {
+        grid-area: location;
+
+        align-self: center;
+
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .side-panel {
+        padding: 23px 21px;
+    }
+
+    .footer {
+        padding: 20px;
+        display: block;
+        line-height: 1.7;
+    }
+
+    .footer-accent {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .brand-mark {
+        transform: scale(0.85);
+        transform-origin: left center;
+        margin-right: -3px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+        letter-spacing: 0.20em;
+    }
+
+    .hero {
+        min-height: 425px;
+    }
+
+    .hero-content {
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .sighting {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(80px, auto);
+    }
+
+    .location {
+        font-size: 11px;
+    }
+}
+
+.changa-one-regular {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.changa-one-regular-italic {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+
+ <!-- Google Search Console verification (add after you create a property) -->
+  <meta name="google-site-verification" content="google-site-verification=UM75aJBW8wypnmWa4Iz-gpCTnF-h2uiDnSSQxfktMow" /> 
+  
+</head>
+
+
+<body>
+
+<div class="page">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-mark"></div>
+
+            <div>
+                <div class="brand-name">
+                    SKOGLU
+                </div>
+
+                <div class="brand-subtitle">
+                    Sightings Log<br>Lipa Elouman <a href="mailto:lipaelouman@gmail.com" target="_blank" style="color:#879b4d;">@lipaelou475</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Veldtloor Forest
+            </div>
+
+            <div class="hero-heading">
+                Skoglu<br>
+                Sightings Log
+            </div>
+
+            <div class="hero-rule"></div>
+
+            <p class="hero-description">
+                A simple record of Skoglu sightings as they have appeared on the Observatory in Veldtloor Forest.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="content">
+
+
+        <!-- =================================================
+             SIGHTINGS
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div class="panel-title">
+
+                    <span class="panel-title-icon">◌</span>
+
+                    <span>
+                        Sightings
+                    </span>
+
+                </div>
+
+                <div class="panel-note">
+                    Most recent first
+                </div>
+
+            </div>
+
+
+            <div class="sightings">
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 8, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 7:32pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Deep Fen
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 7, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 8:01pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Moss Basin
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 6, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 7:18pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Northern Reach
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 5, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 6:41pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Willow Marsh
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 4, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 8:13pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Willow Marsh
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 3, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 6:27pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Old Lantern Shelf
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 2, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 5:39pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Granvik Falls
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        September 1, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 7:10pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Deep Fen
+                    </div>
+
+                </div>
+
+
+                <div class="sighting">
+
+                    <div class="date">
+                        August 31, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 6:17pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Moss Basin
+                    </div>
+
+                </div>
+				
+				 <div class="sighting">
+
+                    <div class="date">
+                        August 30, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 5:17pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Hemlock Creek
+                    </div>
+
+                </div>
+				
+				 <div class="sighting">
+
+                    <div class="date">
+                        August 29, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 8:12pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Moss Basin
+                    </div>
+
+                </div>
+				
+				 <div class="sighting">
+
+                    <div class="date">
+                        August 28, 2026
+                    </div>
+
+                    <div class="time">
+                        @ 7:18pm
+                    </div>
+
+                    <div class="location">
+                        <span class="location-marker"></span>
+                        Briar Creek
+                    </div>
+
+                </div>
+				
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- ABOUT -->
+
+            <section class="side-panel">
+
+                <h2>
+                    About this log
+                </h2>
+
+                <div class="side-rule"></div>
+
+                <p>
+                    Welcome to the Skoglu Sightings Log.
+</p>
+<p>This is an independently maintained record of Skoglu sightings as they&#039;ve appeared on the Skoglu Observatory. All entries are added as new sightings surface. I do my best to keep things up to date, though I can&#039;t promise every listing will appear the moment it&#039;s spotted.</p>
+
+<p>I know Skoglu is, at its core, a stuffed animal toy&mdash;a designed object with a story. But I like the way documenting sightings is a way to lean into treating the world of Veldtloor Forest as if it were just out of reach, unexpectedly waiting on the edge of a quiet walk.</p>
+
+<p>This site isn&#039;t official. It&#039;s my fan project, kept alive by curiosity and a bit of free time. </p>
+
+<p>If you spot something new, or notice an error, feel free to reach out. Until then, see you around the edges of Veldtloor Forest.</p>
+                </p>
+
+            </section>
+
+            <section class="side-panel observatory-panel">
+
+                <div class="observatory-label">
+                    Source
+                </div>
+
+                <h2>
+                    The Observatory
+                </h2>
+
+                <div class="side-rule"></div>
+
+                <p>
+                    Visit the original Observatory to see
+                    the current sighting when one is visible.
+                </p>
+
+                <a
+                    class="observatory-button"
+                    href="https://skoglu.com"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Visit the Observatory
+                </a>
+
+            </section>
+
+        </aside>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <span>
+            Skoglu Sightings Log
+        </span>
+
+        <span class="footer-accent">
+            Veldtloor Forest · Independent record
+        </span>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
